@@ -17,7 +17,10 @@ namespace RouteManagement
 
         public double GetDistance(Point nextPoint)
         {
-            return 0.0;
+            return Math.Sqrt(
+                (this._x - nextPoint._x) * (this._x - nextPoint._x) +
+                (this._y - nextPoint._y) * (this._y - nextPoint._y)
+                );
         }
     }
 }
